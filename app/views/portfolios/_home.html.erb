@@ -1,0 +1,45 @@
+<div class="bg-grad">
+  <div class="container">
+    <div class="icon-bar">
+      <div class="position-absolute top-50 start-0">
+        <div class="border rounded-end">
+          <div class="bg-white shadow">
+            <div class="row icon-outside", data-bs-toggle="tooltip" title="Github">
+              <div class="p-4">
+                <%= link_to '<i class="fa-brands fa-github icon"></i>'.html_safe, 'https://github.com/LiamHayden', target: 'blank', class: "icon" %>
+              </div>
+            </div>
+            <div class="row icon-outside", data-bs-toggle="tooltip" title="Gmail">
+              <div class="p-4">
+                <%= mail_to 'liam.hayden.code@gmail.com', '<i class="fa-solid fa-envelope icon"></i>'.html_safe, class: "icon" %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="vh-100 d-flex justify-content-center align-items-center", id="home">
+      <div class="mx-5">
+        <div class="text-center">
+          <div class="row">
+            <div class="">
+              <p class="h1 fw-bold">Hey, I'm Liam Hayden</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="mt-3">
+              <p class="fs-4">A Software Developer focused on building the Frontend and Backend of Websites
+               and Web Applications. </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="mt-3">
+              <%= button_to "Projects", "#projects", class: "btn btn-success px-5 py-2" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
