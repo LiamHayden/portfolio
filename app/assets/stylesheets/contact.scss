@@ -1,0 +1,11 @@
+#form {
+  width: 75%;
+}
+
+body {
+  @media only screen and (max-width: 774px) {
+    #form {
+      width: 100%
+    }
+  }
+}
