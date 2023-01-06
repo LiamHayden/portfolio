@@ -14,26 +14,29 @@
       </div>
     </div>
 
-    <div class="main">
-      <div class="about">
-        <div class="col me-3">
-          <div class="row">
-            <%= image_tag "testImage.png", alt: "project image", width: "300px" %>
+    <% @projects.each do |project| %>
+      <div class="main">
+        <div class="about">
+          <div class="col me-3">
+            <div class="row">
+              <%= image_tag "testImage.png", alt: "project image", width: "300px" %>
+            </div>
           </div>
-        </div>
-        <%# add loop to display all project data from model %>
-        <div class="col ms-3">
-          <div class="row">
-            <p class="h2 fw-bold">Project Title</p>
-          </div>
-          <div class="">
-            <p class="mt-3">rtegoijuohiuj grteouh tegrsuhongtr</p>
-          </div>
-          <div class="">
-            <%= button_to "Link", "#", class: "btn btn-success px-5 py-2" %>
+          <div class="col ms-3">
+            <div class="row">
+              <p class="h2 fw-bold"> <%= project.title %> </p>
+              <p class="h2 fw-bold">Project Title</p>
+            </div>
+            <div class="">
+              <p class="h2 fw-bold"> <%= project.description %> </p>
+              <p class="mt-3">rtegoijuohiuj grteouh tegrsuhongtr</p>
+            </div>
+            <div class="">
+              <%= button_to "Link", "#", class: "btn btn-success px-5 py-2" %>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    <% end %>
   </div>
 </div>
