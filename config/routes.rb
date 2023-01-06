@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'portfolios#index'
+  root 'projects#index'
   
-  resources 'portfolios'
+  resources 'projects'
 end
