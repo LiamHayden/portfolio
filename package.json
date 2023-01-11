@@ -1,9 +1,0 @@
-{
-  "name": "app",
-  "private": "true",
-  "dependencies": {
-    "@hotwired/turbo-rails": "^7.2.4",
-    "esbuild": "^0.16.16",
-    "jquery": "^3.6.3"
-  }
-}

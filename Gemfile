@@ -11,8 +11,6 @@ gem "sprockets-rails"
 
 gem 'bootstrap', '~> 5.2.2'
 
-gem 'jsbundling-rails', '~> 1.0', '>= 1.0.2'
-
 # Use sqlite3 as the database for Active Record
 # gem "sqlite3", "~> 1.4"
 gem 'pg'
