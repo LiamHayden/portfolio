@@ -1,4 +1,6 @@
 class MessagesController < ApplicationController
+  before_action :authenticate_admin!
+
   def index
     @messages = Message.all
   end
