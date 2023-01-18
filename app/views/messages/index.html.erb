@@ -1,0 +1,26 @@
+<% @messages.each do |message| %>
+  <div class="container p-3">
+    <%= link_to message_path(message), class: "text-decoration-none" do %>
+      <div class="text-dark">
+        <div class="py-3 border border-dark shadow bg-light rounded">
+          <div class="p-2">
+            <div class="m-2">
+              <p class=""><span class="fw-bold">Name:</span> <%= message.name %> </p>
+            </div>
+
+            <div class="m-2">
+              <p class=""><span class="fw-bold">Email:</span> <%= message.email %> </p>
+            </div>
+
+            <div class="text-center pt-3">
+              <p class="fw-bold">Message:</p>
+            </div>
+            <div class="">
+              <%= message.description %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
