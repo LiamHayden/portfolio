@@ -1,28 +1,44 @@
-<%# mobile navbar %>
-<nav class="navbar fixed-top navbar-exspand-sm navbar-dark bg-dark" id="hamburger">
-  <div class="container-fluid">
-  <a class="navbar-brand" href="#">Logo</a>
-    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" 
-      data-bs-target="#hidden" aria-controls="hidden"
-      aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </div>
-</nav>
 
-<div class="collapse" id="hidden">
-  <div class="bg-light shadow-3 p-4">
-    <button class="btn btn-link btn-block border-bottom m-0">Home</button>
-    <button class="btn btn-link btn-block border-bottom m-0">About</button>
-    <button class="btn btn-link btn-block border-bottom m-0">Project</button>
-    <button class="btn btn-link btn-block border-bottom m-0">Contact</button>
+
+<%# hidden dropdown element %>
+<div class="fixed-top" >
+  <%# mobile navbar %>
+  <nav class="navbar fixed-top navbar-dark bg-dark" id="hamburger">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="#">Logo</a>
+      <button class="navbar-toggler" type="button">
+        <span class="navbar-toggler-icon" onclick="mobileNav();"></span>
+      </button>
+    </div>
+  </nav>
+  <div id="hidden">
+    <div class="navbar-dark bg-dark pt-5">
+      <div class="shadow-3 p-4">
+        <div class="nav flex-column align-items-center">
+          <div class="">
+            <li class="nav-item py-3">
+              <%= link_to "Home", "/#home", class: "text-decoration-none li" %>
+            </li>
+            <li class="nav-item py-3">
+              <%= link_to "About", "/#about", class: "text-decoration-none li" %>
+            </li>
+            <li class="nav-item py-3">
+              <%= link_to "Projects", "/#projects", class: "text-decoration-none li" %>
+            </li>
+            <li class="nav-item py-3">
+              <%= link_to "Contact", "/#contact", class: "text-decoration-none li" %>
+            </li>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
 <%# desktop navbar %>
-<nav class="navbar fixed-top navbar-exspand-sm navbar-dark bg-dark" id="nav-bar">
+<nav class="navbar fixed-top navbar-dark bg-dark" id="nav-bar">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Logo</a>
+    <a class="navbar-brand" href="/#home">Logo</a>
     <ul class="nav col-sm justify-content-end">
       <li class="nav-item">
         <%= link_to "Home", "/#home", class: "text-decoration-none px-2 li" %>
@@ -36,15 +52,6 @@
       <li>
         <%= link_to "Contact", "/#contact", class: "text-decoration-none px-2 li" %>
       </li>
-  </ul>
+    </ul>
   </div>
 </nav>
-
-
-
-
-
-
-
-
-
