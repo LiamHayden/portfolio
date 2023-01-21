@@ -13,8 +13,11 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
 
     if @message.save
+      flash[:success] = "Your message has successfully been sent! 
+      You should receive an email confirmation soon."
       redirect_to root_path
     else
+      flash.now[:error] = "Please fix the errors."
       render :new, status: :unprocessable_entity
     end
   end
