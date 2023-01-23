@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+projects = Project.create([{ title: "Private Events", description: "qwerty", link: "https://github.com/LiamHayden/private-events" }, 
+  { title: "Micro Reddit", description: "qwerty", link: "https://github.com/LiamHayden/micro-reddit" }, 
+  { title: "Secrets", description: "qwerty", link: "https://github.com/LiamHayden/secrets" }])
