@@ -14,16 +14,13 @@
           </div>
         </div>
       </div>
-
-      <% path = "1" %>
       <% @projects.each do |project| %>
         <div class="main">
           <div class="about">
             <div class="col me-3">
               <div class="row g-0">
-                <%# display image with name path %>
-                <%= image_tag "project_images/#{ File.basename(path) }", 
-                alt: "Image of project", class: "shadow-lg rounded" %>
+                <%= image_tag project.img, alt: "Image of project", 
+                class: "shadow-lg rounded" %>
               </div>
             </div>
             <div class="col ms-3">
@@ -40,8 +37,6 @@
           </div>
         </div>
         <div style="padding-bottom:10rem;"></div>
-        <%# interate path to next image %>
-        <% path.next! %>
       <% end %>
     </div>
   </div>
