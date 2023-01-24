@@ -13,6 +13,7 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
 
     if @message.save
+      MessageMailer.with(message: @message).confirmation_email.deliver_later
       flash[:success] = "Your message has successfully been sent! 
       You should receive an email confirmation soon."
     else

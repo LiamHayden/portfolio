@@ -6,10 +6,11 @@
   <body>
     <h1>Confirming Your Message, <%= @message.name %></h1>
 
-    <p>This is to confirm that I have received your query. I will respond to <%= @message.email %> shortly.</p>
-    <p>Please find a copy of your message below.</p>
+    <p>This is to confirm that I have received your query and I will respond to <%= @message.email %> shortly.</p>
+    <p>Please find a copy of your message details below.</p>
 
-    <p>Name: <%= @message.name %><br>
+    <p>
+      Name: <%= @message.name %><br>
       Email: <%= @message.email %><br>
       Message: <%= @message.description %>
     </p>
