@@ -5,7 +5,9 @@
   <%# mobile navbar %>
   <nav class="navbar fixed-top navbar-dark bg-dark" id="hamburger">
     <div class="container-fluid">
-    <a class="navbar-brand" href="/#home">Logo</a>
+    <a class="navbar-" href="/#home"> 
+      <%= image_tag "logo", alt: "Liam Hayden site logo", style: "width:70px" %> 
+    </a>
       <button class="navbar-toggler" type="button" data-action="click->toggle#menu">
         <i class="fa-solid fa-bars fs-2 m-2" data-toggle-target="hamburger"></i>
         <i id="hidden" class="fa-solid fa-x fs-2 m-2" data-toggle-target="close"></i>
@@ -39,7 +41,9 @@
 <%# desktop navbar %>
 <nav class="navbar fixed-top navbar-dark bg-dark" id="nav-bar">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/#home">Logo</a>
+    <a class="navbar-" href="/#home"> 
+      <%= image_tag "logo", alt: "Liam Hayden site logo", style: "width:70px" %> 
+    </a>
     <ul class="nav col-sm justify-content-end">
       <li class="nav-item">
         <%= link_to "Home", "/#home", class: "text-decoration-none px-2 li" %>
