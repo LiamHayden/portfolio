@@ -1,17 +1,18 @@
 
 
 <%# hidden dropdown element %>
-<div class="fixed-top" >
+<div class="fixed-top" data-controller="toggle" >
   <%# mobile navbar %>
   <nav class="navbar fixed-top navbar-dark bg-dark" id="hamburger">
     <div class="container-fluid">
     <a class="navbar-brand" href="/#home">Logo</a>
-      <button class="navbar-toggler" type="button">
-        <span class="navbar-toggler-icon" onclick="mobileNav();"></span>
+      <button class="navbar-toggler" type="button" data-action="click->toggle#menu">
+        <i class="fa-solid fa-bars fs-2 m-2" data-toggle-target="hamburger"></i>
+        <i id="hidden" class="fa-solid fa-x fs-2 m-2" data-toggle-target="close"></i>
       </button>
     </div>
   </nav>
-  <div id="hidden">
+  <div id="hidden" data-toggle-target="menu">
     <div class="navbar-dark bg-dark pt-5">
       <div class="shadow-3 p-4">
         <div class="nav flex-column align-items-center">
