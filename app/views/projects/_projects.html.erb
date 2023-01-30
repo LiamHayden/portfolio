@@ -14,29 +14,35 @@
           </div>
         </div>
       </div>
-      <% @projects.each do |project| %>
-        <div class="main">
-          <div class="about">
-            <div class="col me-3">
-              <div class="row g-0">
-                <%= image_tag project.img, alt: "Image of project", 
-                class: "shadow-lg rounded" %>
+      <% if @projects.present? %>
+        <% @projects.each do |project| %>
+          <div class="main">
+            <div class="about">
+              <div class="col me-3">
+                <div class="row g-0">
+                  <%= image_tag project.img, alt: "Image of project", 
+                  class: "shadow-lg rounded" %>
+                </div>
               </div>
-            </div>
-            <div class="col ms-3">
-              <div class="row">
-                <p class="h2 fw-bold"> <%= project.title %> </p>
-              </div>
-              <div class="">
-                <p class="mt-3"> <%= project.description %> </p>
-              </div>
-              <div class="">
-                <%= link_to "Link", project.link, target: 'blank', class: "btn btn-success px-5 py-2" %>
+              <div class="col ms-3">
+                <div class="row">
+                  <p class="h2 fw-bold"> <%= project.title %> </p>
+                </div>
+                <div class="">
+                  <p class="mt-3"> <%= project.description %> </p>
+                </div>
+                <div class="">
+                  <%= link_to "Link", project.link, target: 'blank', class: "btn btn-success px-5 py-2" %>
+                </div>
               </div>
             </div>
           </div>
+          <div style="padding-bottom:10rem;"></div>
+        <% end %>
+      <% else %>
+        <div class="text-center">
+          <p class="fs-1">Projects coming soon...</p>
         </div>
-        <div style="padding-bottom:10rem;"></div>
       <% end %>
     </div>
   </div>
