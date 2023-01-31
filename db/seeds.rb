@@ -10,8 +10,8 @@ projects = Project.create(
   [
     {
       title: "Private Events", 
-      description: "The Private Events app allows users to create events along with 
-      managing user signups. 
+      description: "The Private Events app allows users to create events 
+      and manage user signups. 
       A user can create an account and create an event, 
       creators can also delete and edit their events. 
       Then users can attend these events, or remove their attendance. 
@@ -29,14 +29,26 @@ projects = Project.create(
       It allows users to create, edit or delete their posts. 
       Users can also comment on any post. 
       All posts are then displayed on the home page in descending or ascending order 
-      depending on the users preference. 
+      depending on the users' preference. 
       The Devise gem is utilised to allow users to create accounts.
 
-      The app required multiply one-to-many relationships between each table,
+      The app required multiple one-to-many relationships between each table,
       the ability to comment on a post,
       validations within each model
       and scopes to change the order of the posts.", 
       link: "https://github.com/LiamHayden/micro-reddit", img: "micro_reddit.png" 
+    },
+
+    {
+      title: "Flight Booker",
+      description: "The Odin Flight Booker app will allow a user to select a flight (departure and arrival), 
+      along with dates and the number of passengers. 
+      A user will be able to select from a list of seeded airports.
+
+      The app will require the use of seed data,
+      nested forms
+      and associations.",
+      link: "#", img: "odin_flight_booker.png"
     }
   ]
 )
